@@ -129,11 +129,11 @@ function App({ onLogout, role }) {
       // -----------------------------
 
       const riskResponse =
-        await fetch(
-  `${API_BASE_URL}/api/weather?city=${encodeURIComponent(
-    selectedLocation
-  )}`
-);
+  await fetch(
+    `${API_BASE_URL}/api/ml-risk?city=${encodeURIComponent(
+      selectedLocation
+    )}`
+  );
 
 
       const riskData =
@@ -550,10 +550,10 @@ function App({ onLogout, role }) {
 
           <div
             className={`risk-box ${
-              risk
-                ? risk.risk_level.toLowerCase()
-                : ""
-            }`}
+  risk?.risk_level
+    ? risk.risk_level.toLowerCase()
+    : ""
+}`}
           >
 
             <h1>
