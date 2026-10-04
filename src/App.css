@@ -1,0 +1,593 @@
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  min-height: 100%;
+  width: 100%;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f1f5f9;
+  color: #1e293b;
+}
+
+button,
+input,
+select {
+  font-family: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.app {
+  min-height: 100vh;
+  color: #1e293b;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+  background: linear-gradient(135deg, #172554, #1e3a8a);
+  color: #ffffff;
+  padding: 30px 20px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 34px;
+  color: #ffffff;
+}
+
+.header p {
+  margin: 8px 0;
+  font-size: 16px;
+  color: #e0f2fe;
+}
+
+.header button {
+  margin-top: 15px;
+  padding: 10px 22px;
+  border: none;
+  border-radius: 7px;
+  background: #ffffff;
+  color: #172554;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+/* =========================
+   DASHBOARD
+========================= */
+
+.dashboard {
+  width: 90%;
+  max-width: 1200px;
+  margin: 30px auto;
+}
+
+/* =========================
+   COMMON SECTIONS
+========================= */
+
+.location,
+.weather,
+.risk,
+.alert,
+.safe-zone,
+.resources,
+.admin,
+.agent {
+  background: #ffffff;
+  color: #1e293b;
+  padding: 25px;
+  margin-bottom: 25px;
+  border-radius: 14px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+}
+
+.location h2,
+.weather h2,
+.risk h2,
+.alert h2,
+.safe-zone h2,
+.resources h2,
+.admin h2,
+.agent h2 {
+  margin-top: 0;
+  color: #172554;
+}
+
+.location p,
+.weather p,
+.risk p,
+.alert p,
+.safe-zone p,
+.resources p,
+.admin p,
+.agent p {
+  color: #334155;
+}
+
+/* =========================
+   LOCATION
+========================= */
+
+.location {
+  border-left: 6px solid #2563eb;
+}
+
+.location h2 {
+  color: #1e3a8a;
+}
+
+.location p {
+  font-size: 17px;
+  margin: 8px 0;
+}
+
+.location strong {
+  color: #172554;
+}
+
+.location-search {
+  display: flex;
+  gap: 12px;
+  margin: 20px 0;
+}
+
+.location-search input {
+  flex: 1;
+  padding: 12px;
+  border: 2px solid #94a3b8;
+  border-radius: 8px;
+  font-size: 16px;
+  color: #111827;
+  background: #ffffff;
+}
+
+.location-search input::placeholder {
+  color: #64748b;
+  opacity: 1;
+}
+
+.location-search input:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+.location-search button {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  background: #2563eb;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.location-search button:hover {
+  background: #1d4ed8;
+}
+
+.location-search button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.location-details {
+  background: #eff6ff;
+  padding: 12px;
+  border-radius: 8px;
+  margin-top: 12px !important;
+  color: #1e3a8a !important;
+}
+
+/* =========================
+   AI AGENTS
+========================= */
+
+.agent {
+  border-left: 6px solid #7c3aed;
+}
+
+.agent h2 {
+  color: #4c1d95;
+}
+
+.agent p {
+  font-size: 17px;
+  margin: 10px 0;
+  line-height: 1.5;
+  color: #334155;
+}
+
+.agent p:first-of-type {
+  font-weight: bold;
+  color: #16a34a;
+}
+
+.agent p:last-child {
+  color: #475569;
+}
+
+.agent strong {
+  color: #172554;
+}
+
+/* =========================
+   WEATHER
+========================= */
+
+.weather {
+  border-left: 6px solid #0891b2;
+}
+
+.weather h2 {
+  color: #0e7490;
+}
+
+.weather-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.card {
+  background: #eef2ff;
+  color: #1e293b;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  border: 1px solid #c7d2fe;
+}
+
+.card h3 {
+  margin-top: 0;
+  font-size: 16px;
+  color: #334155;
+}
+
+.card p {
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 0;
+  color: #1e3a8a !important;
+}
+
+.weather > p:last-child {
+  color: #64748b;
+  font-size: 13px;
+}
+
+/* =========================
+   FLOOD RISK
+========================= */
+
+.risk {
+  border-left: 6px solid #dc2626;
+}
+
+.risk h2 {
+  color: #991b1b;
+}
+
+.risk-box {
+  padding: 25px;
+  text-align: center;
+  border-radius: 12px;
+  color: #1e293b;
+}
+
+.risk-box h1 {
+  font-size: 42px;
+  margin: 0 0 15px;
+}
+
+.risk-box p {
+  font-size: 17px;
+  margin: 8px 0;
+  color: #334155;
+}
+
+.risk-box.low {
+  background: #dcfce7;
+}
+
+.risk-box.low h1 {
+  color: #15803d;
+}
+
+.risk-box.medium {
+  background: #fef3c7;
+}
+
+.risk-box.medium h1 {
+  color: #b45309;
+}
+
+.risk-box.high {
+  background: #fee2e2;
+}
+
+.risk-box.high h1 {
+  color: #dc2626;
+}
+
+/* =========================
+   EMERGENCY ALERT
+========================= */
+
+.alert {
+  border-left: 6px solid #dc2626;
+  background: #fff7ed;
+}
+
+.alert h2 {
+  color: #9a3412;
+}
+
+.alert p {
+  font-size: 18px;
+  line-height: 1.5;
+  color: #431407;
+}
+
+.alert button {
+  padding: 12px 22px;
+  border: none;
+  border-radius: 7px;
+  background: #dc2626;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* =========================
+   SAFE ZONE
+========================= */
+
+.safe-zone {
+  border-left: 6px solid #16a34a;
+}
+
+.safe-zone h2 {
+  color: #166534;
+}
+
+.safe-zone p {
+  font-size: 17px;
+  margin: 8px 0;
+  color: #334155;
+}
+
+.safe-zone .leaflet-container {
+  height: 350px;
+  width: 100%;
+  margin-top: 18px;
+  border-radius: 10px;
+}
+
+.safe-zone-result {
+  background: #ecfdf5;
+  border: 1px solid #86efac;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 15px 0;
+  color: #14532d;
+}
+
+.safe-zone-result h3 {
+  margin-top: 0;
+  color: #166534;
+  font-size: 21px;
+}
+
+.safe-zone-result p {
+  margin: 9px 0;
+  color: #334155;
+}
+
+.warning-text {
+  color: #92400e !important;
+  background: #fef3c7;
+  padding: 12px;
+  border-radius: 8px;
+}
+
+/* =========================
+   RESOURCES
+========================= */
+
+.resources {
+  border-left: 6px solid #0891b2;
+}
+
+.resources h2 {
+  color: #0e7490;
+}
+
+.resource-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.resource-card {
+  background: #f0fdfa;
+  color: #134e4a;
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid #a5f3fc;
+}
+
+.resource-card h3 {
+  margin-top: 0;
+  color: #115e59;
+}
+
+.resource-card p {
+  font-size: 20px;
+  font-weight: bold;
+  color: #0f766e !important;
+}
+
+.resource-card small {
+  color: #475569;
+}
+
+.resource-note {
+  margin-top: 20px;
+  padding: 15px;
+  background: #fff7ed;
+  border-radius: 10px;
+  color: #9a3412 !important;
+  line-height: 1.5;
+}
+
+.map-attribution {
+  font-size: 13px !important;
+  color: #64748b !important;
+}
+
+/* =========================
+   FACILITY LIST
+========================= */
+
+.facility-list {
+  margin-top: 25px;
+}
+
+.facility-list h3 {
+  margin-bottom: 15px;
+  color: #172554;
+}
+
+.facility-item {
+  background: #f8fafc;
+  color: #334155;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 10px;
+  line-height: 1.7;
+}
+
+.facility-item strong {
+  color: #1e3a8a;
+}
+
+.facility-item span {
+  color: #475569;
+}
+
+/* =========================
+   ADMIN
+========================= */
+
+.admin {
+  border-left: 6px solid #7c3aed;
+  background: #faf5ff;
+}
+
+.admin h2 {
+  color: #6d28d9;
+}
+
+.admin p {
+  font-size: 17px;
+  margin: 10px 0;
+  color: #334155;
+}
+
+/* =========================
+   LOGIN - OLD STYLES
+   Kept for compatibility
+========================= */
+
+.login-page {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #dbeafe, #eef2ff);
+  padding: 30px 20px;
+}
+
+.login-box {
+  width: 420px;
+  max-width: 100%;
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  text-align: center;
+}
+
+.login-box h1 {
+  font-size: 25px;
+  margin: 0 0 12px;
+  color: #172554;
+}
+
+.login-box h2 {
+  margin: 0 0 25px;
+  color: #334155;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 900px) {
+  .weather-grid,
+  .resource-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .dashboard {
+    width: 94%;
+  }
+
+  .header h1 {
+    font-size: 27px;
+  }
+
+  .weather-grid,
+  .resource-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .location,
+  .weather,
+  .risk,
+  .alert,
+  .safe-zone,
+  .resources,
+  .admin,
+  .agent {
+    padding: 20px;
+  }
+
+  .location-search {
+    flex-direction: column;
+  }
+
+  .login-box {
+    padding: 30px 22px;
+  }
+}
